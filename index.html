@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" no-translate="true">
+ <head>
+  <meta charset="utf-8"/>
+  <link rel="icon" href="favicon.ico"/>
+  <meta name="viewport" content="width=device-width, initial-scale-1.0, user-scalable=no"/>
+  <title>Chat Bot</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"/>
+ </head>
+ <body onload="startTime()" id="body" class="body">
+ <header>
+  <div class="headerBot">
+   <div class="imgboxs" id="imgBox">
+    <img src="boticon.webp" alt="FaBOT" id="img"/>
+   </div>
+   <div class="botInfo">
+     <p class="nameBot">Fabot Chat</p>
+     <p class="botStatus">Online</p>
+   </div>
+    <ion-icon class="headerIcon" id="mail" name="mail-sharp" onclick="alert('fitur akan segera hadir')"></ion-icon>
+    <ion-icon class="headerIcon" id="ellips" name="ellipsis-vertical-sharp" onclick="alert('fitur akan segera hadir')"></ion-icon>
+  </div>
+ </header>
+  <h1 class="err">MAAF WEBSITE INI TIDAK TERSEDIA UNTUK VERSI DESKTOP</h1>
+   <div class="arrow-button">
+     <ion-icon name="arrow-back-sharp" id="arrow-menu" class="arrowMenus"></ion-icon>
+    </div>
+   <div class="menu">
+    <div class="headerMenu">
+      <ion-icon name="qr-code" onclick="alert('fitur akan segera hadir')"></ion-icon>
+      <ion-icon name="moon" id="moon"></ion-icon>
+      <ion-icon name="brush" onclick="alert('fitur akan segera hadir')"></ion-icon>
+    </div>
+     <div class="profileSection">
+      <div class="profileImgBox" onclick="perbesarGambar()">
+        <img src="profileicon.webp" class="imgProfile">
+       <div class="userInfo">
+         <p class="nameUser">Farid Fn</p>
+         <p class="statusUser">Online</p>
+        </div>
+      </div>
+    </div>
+    <div class="contentMenu">
+     <div class="cards">
+      <p id="bio" class="infoTxt"><ion-icon name="person"></ion-icon>&nbsp;About Me</p>
+      
+       <div class="description">
+        <div class="wrapper-text">
+         <p class="descriptionText" id="descriptionSatu">DESKRIPSI 1</p>
+        </div>
+       </div>
+       
+      <div id="text1" class="description">
+        <div class="wrapper-text">
+         <div class="arrow"></div>
+         <p class="descriptionText" id="descriptionDua">DESKRIPSI 2</p>
+        </div>
+       </div>
+       
+      <div id="text2" class="description">
+        <div class="wrapper-text">
+         <div class="arrow"></div>
+         <p class="descriptionText" id="descriptionTiga">DESKRIPSI 3</p>
+        </div>
+       </div>
+       
+      </div>
+       <div class="underline"></div>
+      <div class="Favorite">
+       <p id="bio" class="infoTxt"><ion-icon name="sparkles"></ion-icon>&nbsp;Favorite thing</p>
+       <div class="container-favorite">
+       <div class="cards-favorite">
+        
+        <div class="favorite-items">
+         <div class="rowFav fav1"></div>
+         <div class="wrapperFav">
+           <ion-icon name="game-controller"></ion-icon>
+           <p class="favtxt">Game</p>
+         </div>
+          <div class="descFav row1">
+           <p id="desc1">FAVORITE 1</p>
+          </div>
+        </div>
+        
+        <div class="favorite-items">
+         <div class="rowFav fav2"></div>
+         <div class="wrapperFav">
+           <ion-icon name="musical-notes"></ion-icon>
+           <p class="favtxt">Music</p>
+         </div>
+         <div class="descFav row2">
+           <p id="desc2">FAVORITE 2</p>
+          </div>
+        </div>
+        
+        <div class="favorite-items">
+         <div class="rowFav fav3"></div>
+         <div class="wrapperFav">
+           <ion-icon name="code-slash"></ion-icon>
+           <p class="favtxt">Coding</p>
+         </div>
+         <div class="descFav row2">
+           <p id="desc3">FAVORITE 3</p>
+          </div>
+        </div>
+        
+        <div class="favorite-items">
+         <div class="rowFav fav4"></div>
+         <div class="wrapperFav">
+          <ion-icon name="bed"></ion-icon>
+           <p class="favtxt">Sleep</p>
+         </div>
+         <div class="descFav row4">
+           <p id="desc4">FAVORITE 4</p>
+          </div>
+        </div>
+        
+       </div>
+      </div>
+    </div> <!--containerFavorite end-->
+    
+    <div class="underline"></div>
+    
+  </div>
+ </div>
+  <div class="container">
+    <div class="container-linear"></div>
+    <div class="container-love"></div>
+   <div class="wrapper">
+    <div class="containerInput">
+      <input id="jawaban" type="text" placeholder="Silahkan Jawab" class='no-context-menu'
+      onkeyup="checkInput()"/>
+      <div class="barier"></div>
+      <button onclick="botStart()" id="myButton" disabled><ion-icon name="send-sharp"></ion-icon></button>
+     </div>
+     <div class="footer">
+       <p>This website is made only for learning in development a website, FaBot-Chat <u>22 June Version.</u></p>
+     </div>
+   </div>
+   <div class="date">
+     <p>31 Mei 2023</p>
+   </div>
+   <div class="about">
+     <p><ion-icon name="lock-closed"></ion-icon> pesan dan riwayat chat terenkripsi secara end-to-end. tidak seorang pun di luar chat ini, termasuk developer yang dapat membaca atau melihatnya.</p>
+   </div>
+   <div class="containerChat" id="firstContentPertanyaan">
+     <div class="chatPertanyaans" id="firstChatPertanyaan">
+      <div class="arrowQuest"></div>
+       <p id="firstPertanyaan">pertanyaan</p>
+       <p id="timeQuestion"></p>
+      </div>
+    </div>
+   <div class="containerChat" id="contentJawaban">
+      <div class="chatJawaban" id="chatJawaban">
+       <div class="arrowAsk"></div>
+         <p id="textJawaban">Jawaban</p>
+         <span>
+          <p id="timeAsk"></p>
+          <ion-icon name="checkmark-done-sharp" id="check2" class="ceklisDua"></ion-icon>
+         </span>
+       </div>
+    </div>
+   <div class="containerChat" id="contentPertanyaan">
+     <div id="chatPertanyaan" class="chatPertanyaans">
+      <div class="arrowQuest"></div>
+       <p id="textPertanyaan">pertanyaan kedua</p>
+       <p id="timeQuestion"></p>
+      </div>
+    </div>
+  </div>
+  <script src="style.js"></script>
+  <script src="swapBg.js"></script>
+  <script src="chatbot.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+ </body>
+</html>
